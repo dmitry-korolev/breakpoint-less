@@ -6,7 +6,7 @@ Really simple media queries in LESS
 1. [Vendor prefixes](#vendor-prefixes)
 1. [Media queries concatenation](#media-queries-concatenation)
 
-This simple lib does almost everything, that it's [inspirer](https://github.com/at-import/breakpoint) can. All I can is to quote:
+This simple lib does almost everything, that it's [inspirer](https://github.com/at-import/breakpoint) can. All I can do is to quote:
 > Create a variable using a simplified syntax based on most commonly used media queries, then call it using the `breakpoint` mixin.
 
 There are two major differences between this library and breakpoint-sass. First, it doesn't (and, in my humble opinion, shouldn't) take care of vendor prefixes. Second, there is no way to get context as [here](https://github.com/at-import/breakpoint/wiki/Breakpoint-Context).
