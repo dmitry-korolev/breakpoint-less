@@ -6,7 +6,7 @@ Really simple media queries in LESS
 1. [Vendor prefixes](#vendor-prefixes)
 1. [Media queries concatenation](#media-queries-concatenation)
 
-This simple lib does almost everything, that it's [inspirer](https://github.com/at-import/breakpoint) can. All I can do is to quote:
+This simple lib does almost everything, that it's [inspirer](https://github.com/at-import/breakpoint) can. Quote:
 > Create a variable using a simplified syntax based on most commonly used media queries, then call it using the `breakpoint` mixin.
 
 There are two major differences between this library and breakpoint-sass. First, it doesn't (and, in my humble opinion, shouldn't) take care of vendor prefixes. Second, there is no way to get context as [here](https://github.com/at-import/breakpoint/wiki/Breakpoint-Context).
@@ -134,7 +134,7 @@ Second, use it! You can pass options to the mixin directly or by variables, that
     }
 }
 ```
-#### Standalone
+#### Final example
 ```less
 .breakpoint(300px, {
     .test8 {
@@ -151,7 +151,7 @@ Second, use it! You can pass options to the mixin directly or by variables, that
 ```
 
 ## Vendor prefixes
-Breakpoint-less doesn't worry about cross-browser compatibility. You should neither. Use autoprefixer and the power of PostCSS!
+Breakpoint-less doesn't worry about cross-browser compatibility. Neither should you. Who should you ask? [Autoprefixer](https://github.com/postcss/autoprefixer).
 ```less
 .test9 {
     .breakpoint("min-resolution 3dppx", {
@@ -176,7 +176,7 @@ Breakpoint-less doesn't worry about cross-browser compatibility. You should neit
 ```
 
 ## Media queries concatenation
-LESS (just as SASS) has absolutely no way to concatenate media queries. Sorry, just no. But you can use the power of (guess what) PostCSS! I prefer [CSS MQPacker](https://github.com/hail2u/node-css-mqpacker).
+LESS (just as SASS) has absolutely no internal way to combine media queries. Sorry, just no. But with the power of another PostCSS library - [CSS MQPacker](https://github.com/hail2u/node-css-mqpacker) - mission becomes possible:
 ```less
 .test10 {
     .breakpoint(300px, {
