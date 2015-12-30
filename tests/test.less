@@ -1,0 +1,102 @@
+@import "lib/_breakpoint";
+
+ /*
+     Single value:
+     only screen and (min-width: 450px)
+*/
+.test {
+    .breakpoint(450px, {
+        color: #fff;
+    });
+}
+
+/*
+    Two values:
+    only screen and (min-width: 450px) and (min-height: 500px)
+*/
+.test2 {
+    .breakpoint("450px 500px", {
+        color: #fff;
+    });
+}
+
+/*
+    Property and value pair:
+    only screen and (max-width: 1000px)
+*/
+.test3 {
+    .breakpoint("max-width 1000px", {
+        color: #fff;
+    });
+}
+
+// Variables usage
+@several:  "(min-height 1000px) (orientation portrait)";
+@combined: "(1000px 500px) (orientation portrait)";
+@ratio:    "min-resolution 3dppx";
+
+/*
+    Several media rules:
+    only screen and (min-height: 1000px) and (orientation: portrait)
+*/
+.test4 {
+    //
+    .breakpoint(@several, {
+        color: #fff;
+    });
+}
+
+/*
+    Several media rules, one of which is a combined one (see test #2):
+    only screen and (min-width: 1000px) and (min-height: 500px) and (orientation: portrait)
+*/
+.test5 {
+    .breakpoint(@combined, {
+        color: #fff;
+    });
+}
+
+/*
+    Pixel-ratio / resolution (see README.MD):
+    only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx)
+*/
+.test6 {
+    .breakpoint(@ratio, {
+        color: #fff;
+    });
+}
+
+/*
+    Type keywords ("not print"):
+    not print and (min-width: 300px)
+*/
+.test7 {
+    .breakpoint(300px, "not print", {
+        color: #fff;
+    });
+}
+
+/*
+    Type keywords ("all"):
+    only all and (min-width: 300px)
+*/
+.test8 {
+    .breakpoint(300px, "all", {
+        color: #fff;
+    });
+}
+
+/*
+    Media queries concatenation (see README.MD):
+    only all and (min-width: 300px)
+*/
+.test9 {
+    .breakpoint(300px, {
+        color: #fff;
+    });
+}
+.test10 {
+    .breakpoint(300px, {
+        color: #fff;
+    });
+}

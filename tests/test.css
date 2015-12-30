@@ -1,0 +1,86 @@
+/*
+     Single value:
+     only screen and (min-width: 450px)
+*/
+@media only screen and (min-width: 450px) {
+  .test {
+    color: #fff;
+  }
+}
+/*
+    Two values:
+    only screen and (min-width: 450px) and (min-height: 500px)
+*/
+@media only screen and (min-width: 450px) and (min-height: 500px) {
+  .test2 {
+    color: #fff;
+  }
+}
+/*
+    Property and value pair:
+    only screen and (max-width: 1000px)
+*/
+@media only screen and (max-width: 1000px) {
+  .test3 {
+    color: #fff;
+  }
+}
+/*
+    Several media rules:
+    only screen and (min-height: 1000px) and (orientation: portrait)
+*/
+@media only screen and (min-height: 1000px) and (orientation: portrait) {
+  .test4 {
+    color: #fff;
+  }
+}
+/*
+    Several media rules, one of which is a combined one (see test #2):
+    only screen and (min-width: 1000px) and (min-height: 500px) and (orientation: portrait)
+*/
+@media only screen and (min-width: 1000px) and (min-height: 500px) and (orientation: portrait) {
+  .test5 {
+    color: #fff;
+  }
+}
+/*
+    Pixel-ratio / resolution (see README.MD):
+    only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx)
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx) {
+  .test6 {
+    color: #fff;
+  }
+}
+/*
+    Type keywords ("not print"):
+    not print and (min-width: 300px)
+*/
+@media not print and (min-width: 300px) {
+  .test7 {
+    color: #fff;
+  }
+}
+/*
+    Type keywords ("all"):
+    only all and (min-width: 300px)
+*/
+@media only all and (min-width: 300px) {
+  .test8 {
+    color: #fff;
+  }
+}
+/*
+    Media queries concatenation (see README.MD):
+    only all and (min-width: 300px)
+*/
+@media only screen and (min-width: 300px) {
+  .test9 {
+    color: #fff;
+  }
+}
+@media only screen and (min-width: 300px) {
+  .test10 {
+    color: #fff;
+  }
+}
