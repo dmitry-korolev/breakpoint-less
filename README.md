@@ -122,11 +122,38 @@ Second, use it! You can pass options to the mixin directly or by variables, that
     }
 }
 ```
+```css
+@media not print and (min-width: 300px) {
+    .test6 {
+        color: #fff;
+    }
+}
+@media only all and (min-width: 300px) {
+    .test7 {
+        color: #fff;
+    }
+}
+```
+#### Standalone
+```less
+.breakpoint(300px, {
+    .test8 {
+        color: #fff;
+    }
+});
+```
+```css
+@media only screen and (min-width: 300px) {
+  .test8 {
+    color: #fff;
+  }
+}
+```
 
 ## Vendor prefixes
 Breakpoint-less doesn't worry about cross-browser compatibility. You should neither. Use autoprefixer and the power of PostCSS!
 ```less
-.test8 {
+.test9 {
     .breakpoint("min-resolution 3dppx", {
         color: #fff;
     });
@@ -135,14 +162,14 @@ Breakpoint-less doesn't worry about cross-browser compatibility. You should neit
 ```css
 /* Without autoprefixer */
 @media only screen and (min-resolution: 3dppx) {
-    .test8 {
+    .test9 {
         color: #fff;
     }
 }
 
 /* With autoprefixer */
 @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx) {
-    .test8 {
+    .test9 {
         color: #fff;
     }
 }
@@ -151,12 +178,12 @@ Breakpoint-less doesn't worry about cross-browser compatibility. You should neit
 ## Media queries concatenation
 LESS (just as SASS) has absolutely no way to concatenate media queries. Sorry, just no. But you can use the power of (guess what) PostCSS! I prefer [CSS MQPacker](https://github.com/hail2u/node-css-mqpacker).
 ```less
-.test9 {
+.test10 {
     .breakpoint(300px, {
         color: #fff;
     });
 }
-.test10 {
+.test11 {
     .breakpoint(300px, {
         color: #fff;
     });
@@ -164,10 +191,10 @@ LESS (just as SASS) has absolutely no way to concatenate media queries. Sorry, j
 ```
 ```css
 @media only screen and (min-width: 300px) {
-    .test9 {
+    .test10 {
         color: #fff
     }
-    .test10 {
+    .test11 {
         color: #fff
     }
 }

@@ -27,7 +27,7 @@
             .on('error', notify.onError(function (error) {
                 return 'Failed to Compile LESS: ' + error.message;
             }))
-            // Uncomment this to combine medua queries
+            // Uncomment this to combine media queries
             // .pipe(postcss([
             //     mqpacker
             // ]))

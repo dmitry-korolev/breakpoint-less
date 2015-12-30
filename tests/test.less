@@ -88,7 +88,7 @@
 
 /*
     Media queries concatenation (see README.MD):
-    only all and (min-width: 300px)
+    only screen and (min-width: 300px)
 */
 .test9 {
     .breakpoint(300px, {
@@ -100,3 +100,13 @@
         color: #fff;
     });
 }
+
+/*
+    Orphanage:
+    only screen and (min-width: 300px)
+*/
+.breakpoint(300px, {
+    .test11 {
+        color: #fff;
+    }
+});
