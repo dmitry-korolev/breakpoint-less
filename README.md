@@ -139,7 +139,7 @@ Second, use it! You can pass options to the mixin directly or by variables, that
 ```
 
 ## Vendor prefixes
-Breakpoint-less doesn't worry about cross-browser compatibility. Neither should you. Who should you ask? [Autoprefixer](https://github.com/postcss/autoprefixer).
+Breakpoint-less doesn't worry about cross-browser compatibility. Neither should you. Who should, you might ask? [Autoprefixer](https://github.com/postcss/autoprefixer).
 ```less
 .test9 {
     .breakpoint("min-resolution 3dppx", {
