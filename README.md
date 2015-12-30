@@ -122,18 +122,6 @@ Second, use it! You can pass options to the mixin directly or by variables, that
     }
 }
 ```
-```css
-@media not print and (min-width: 300px) {
-    .test6 {
-        color: #fff;
-    }
-}
-@media only all and (min-width: 300px) {
-    .test7 {
-        color: #fff;
-    }
-}
-```
 #### Final example
 ```less
 .breakpoint(300px, {
