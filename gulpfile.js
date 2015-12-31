@@ -3,7 +3,7 @@
     'use strict';
 
     var gulp            = require('gulp'),
-        autoprefixer    = require('autoprefixer');
+        autoprefixer    = require('autoprefixer'),
         less            = require('gulp-less'),
         notify          = require('gulp-notify'),
         postcss         = require('gulp-postcss'),
@@ -28,7 +28,7 @@
                 return 'Failed to Compile LESS: ' + error.message;
             }))
             .pipe(postcss([
-                mqpacker,
+                // mqpacker,
                 autoprefixer({
                     browsers: ['last 3 versions'],
                     cascade: false
