@@ -3,20 +3,25 @@ Really simple media queries in LESS
 
 #### Table of contents
 1. [Usage](#usage)
-1. [Vendor prefixes](#vendor-prefixes)
-1. [Media queries concatenation](#media-queries-concatenation)
+  1. [Single value](#single-value)
+  2. [Two values](#two-values)
+  3. [Property and value pair](#property-and-value-pair)
+  4. [Several media rules](#several-media-rules)
+  5. [Type keywords](#type-keywords)
+2. [Vendor prefixes](#vendor-prefixes)
+3. [Media queries concatenation](#media-queries-concatenation)
 
-This simple lib does almost everything, that it's [inspirer](https://github.com/at-import/breakpoint) can. Quote:
+This simple mixin does almost everything, that it's [inspirer](https://github.com/at-import/breakpoint) can. Quote:
 > Create a variable using a simplified syntax based on most commonly used media queries, then call it using the `breakpoint` mixin.
 
-There are two major differences between this library and breakpoint-sass. First, it doesn't (and, in my humble opinion, shouldn't) take care of vendor prefixes. Second, there is no way to get context as [here](https://github.com/at-import/breakpoint/wiki/Breakpoint-Context).
+There are two major differences between this library and breakpoint-sass. First, it doesn't (and, in my humble opinion, shouldn't) take care of vendor prefixes. Second, there is no way to get context as described [here](https://github.com/at-import/breakpoint/wiki/Breakpoint-Context).
 
 ## Usage
 First, include the main `_breakpoint.less` file like this:
 ```css
 @import "lib/_breakpoint";
 ```
-Second, use it! You can pass options to the mixin directly or by variables, that doesn't really matter.
+Second, use it!
 
 #### Single value
 ```less
@@ -82,21 +87,6 @@ Second, use it! You can pass options to the mixin directly or by variables, that
 }
 ```
 
-#### Several media rules, one of which is a combined one
-```less
-.test5 {
-    .breakpoint("(1000px 500px) (orientation portrait)", {
-        color: #fff;
-    });
-}
-```
-```css
-@media only screen and (min-width: 1000px) and (min-height: 500px) and (orientation: portrait) {
-    .test5 {
-        color: #fff;
-    }
-}
-```
 #### Type keywords
 ```less
 .test6 {
@@ -122,21 +112,8 @@ Second, use it! You can pass options to the mixin directly or by variables, that
     }
 }
 ```
-#### Final example
-```less
-.breakpoint(300px, {
-    .test8 {
-        color: #fff;
-    }
-});
-```
-```css
-@media only screen and (min-width: 300px) {
-  .test8 {
-    color: #fff;
-  }
-}
-```
+
+You can see other examples in the [test file](https://github.com/ApatheticG/breakpoint-less/blob/master/tests/test.less).
 
 ## Vendor prefixes
 Breakpoint-less doesn't worry about cross-browser compatibility. Neither should you. Who should, you might ask? [Autoprefixer](https://github.com/postcss/autoprefixer).
